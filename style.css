@@ -1,0 +1,253 @@
+:root{
+    --black:rgb(18, 22, 103);
+    --white:aliceblue;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    width: 100%;
+    height:100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: monospace;
+    background-color: var(--black);
+    position: relative;
+    color: var(--white);
+}
+
+
+
+header{
+    height: 10%;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items:center;
+}
+header h1{
+    font-size: 30px;
+    width: 70%;
+    font-weight: 300;
+}
+header div{
+    width: 15%;
+    height: 60%;
+    display: flex;
+    gap: 10px;
+    font-size: 25px;
+    align-items: center;
+}
+
+main{
+    height: 80%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+/*PARTE DO MAIN, O BOTAO QUE FAZ APARECER O FOMULARIO DOS DECKS*/
+.createDecks{ /*botao que faz aparecer o formulario dos decks */
+    position: absolute;
+    top: 80%;
+    height:70px;
+    width:70px;
+    left: 80%;
+    border-radius: 50%;
+    padding:10px;
+    background-color: var(--white);
+    border: 2px solid gray;
+}
+
+footer{
+    height: 10%;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items:center;
+}
+
+
+.divs{
+    width: 100%;
+    height: 35px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:start;
+
+}
+.ps{
+    font-size: 15pt;
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 4px;
+}
+
+/* FORMULARIO PARA CRIAR OS DECKS */
+.formOfTheDecks{ /* formulario que cadrastar os decks */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 50%;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(13, 13, 134);
+    justify-content: space-around;
+    border-radius: 2rem;
+    border: 4px solid var(--white);
+    padding: 15px;
+    visibility: hidden;
+}
+.button-Leave{ /* botao que sai do formulario que cadrastar os decks*/
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid var(--black);
+    border-radius: 2rem;
+    background-color: red;
+}
+.button-Leave:active{
+    background-color: rgb(92, 2, 2);
+}
+.formOfTheDecks p{
+    font-size: 25px;
+}
+
+.formOfTheDecks input{
+    width: 99%;
+    height: 10%;
+    font-size: 20px;
+    border: 0;
+}
+
+.formOfTheDecks input:focus{
+    outline: none;
+}
+
+.addDecks{
+    width: 100%;
+    height: 20%;
+    font-size: 20px;
+    border-radius: 2rem;
+    border: 2px solid white;
+    background-color: transparent;
+    color: aliceblue;
+}
+.addDecks:active{
+    background-color:rgb(31, 95, 255) ;
+    color: aliceblue;
+
+}
+
+/*PARTE INDIVIDUAL DE CADA DECKS*/
+
+.individualDecks{ /*PARTE DO DECK ONDE SE PODE ESTUDAR E ADCIONAR CARDS */
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--black);
+    color: aliceblue;
+    position: absolute;
+}
+
+.individualDecks_header{
+    height: 10%;
+    width: 100%;
+    padding: 5px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 30px;
+}
+/* .leavingfrom-individualDecks_header{ /*BOTAO QUE SAI DO individualDecks_header  
+    width: 15%;
+    padding: 5px;
+    background-color: rgb(123, 187, 255);
+    border-radius: 2rem;
+    border: 2px solid black;
+    font-weight: 800;
+}*/
+
+.individualDecks_main{
+    width: 100%;
+    height: 45%;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+    gap: 70px;
+}
+
+.individualDecks_footer{
+    height: 45%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+.listOfCards{
+    height: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    overflow-y:scroll;
+}
+.card{
+    font-size: 17px;
+    margin-left:15px;
+}
+
+.doingCards, .addCards{
+    width: 40%;
+    height: 15%;
+    border-radius: 2rem;
+    border: 2px solid white;
+    background-color: transparent;
+    color: aliceblue;
+    font-size: 15px;
+}
+
+.doingCards:active, .addCards:active{
+    background-color: rgb(255, 255, 255);
+    color:var(--black);
+    font-size: 15px;
+}
+
+/*ESTUDANDO CARTÕES*/
+.formOfTheCards{
+    position: absolute;
+    left: 10%;
+    top: 10%;
+    height:80%;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background-color: var(--black);
+    border: 4px solid var(--white);
+    border-radius: 2rem;
+}
+.Parts{
+    width:90%;
+    height: 40%;
+    border-radius: 2rem;
+}
+.Parts-input{
+    width: 100%;
+    height: 100%;
+    font-size: 12pt;
+    border-radius: 2rem;
+    font-weight: 600;
+
+}
